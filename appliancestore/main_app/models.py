@@ -1,15 +1,8 @@
 from django.db import models
 
 # Create your models here.
-class Appliance:
+class Appliance(models.Model):
     def __init__(self, name, description, price):
-        self.name = name
-        self.description = description
-        self.price = price
-
-
-appliances = [
-    Appliance('Hammer', 'Wooden', '$5.00'),
-    Appliance('Hammer', 'Solid Steel', '$15.00'),
-    Appliance('Screwdriver', 'Wooden Handle', '$3.00')
-]
+        name = models.CharField(max_length=100)
+        description = models.CharField(max_length=100)
+        price = models.CharField(max_length=100)
