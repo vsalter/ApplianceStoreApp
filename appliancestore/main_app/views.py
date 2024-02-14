@@ -15,4 +15,5 @@ def appliances_list(request):
     return render(request, 'appliances/appliances.html', {'appliances': appliances})
 
 def appliances_detail(request, appliance_id):
-    return HttpResponse("<h1>Appliance Detail</h1>")
+    appliance = Appliance.objects.get(id=appliance_id)
+    return render(request, 'appliances/detail.html', {'appliance': appliance})
