@@ -15,7 +15,10 @@
         <nav>
             <div class="nav-wrapper">
                 <ul>
-                    <li class="left brand-logo">&nbsp;&nbsp;Appliance Store</li>
+                    <li><a href="{% url 'appliances' %}" class="left brand-logo">&nbsp;&nbsp;Appliance Store</a></li>
+                </ul>
+                <ul class="right">
+                    <li><a href="{% url 'about' %}">About</a></li>
                 </ul>
             </div>
         </nav>
